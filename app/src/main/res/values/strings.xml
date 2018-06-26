@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Layout</string>
+    <string name="date_of_birth">Date of birth :</string>
+    <string name="register">Register</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

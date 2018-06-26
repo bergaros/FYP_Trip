@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "699779293649",
+    "firebase_url": "https://mobap-5971d.firebaseio.com",
+    "project_id": "mobap-5971d",
+    "storage_bucket": "mobap-5971d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699779293649:android:4447747100b3d752",
+        "android_client_info": {
+          "package_name": "com.berga.layout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699779293649-gji5gaa1p3lojrvvinfab8umku6r5pbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.berga.layout",
+            "certificate_hash": "89783cc1538654537c4f5e73c440db842d6dae6c"
+          }
+        },
+        {
+          "client_id": "699779293649-pr6u4e55f8tgnlu5mam76310pqg94usb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsjFs0kAEba57KFrh6giEj6gPQVgAjAIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699779293649-pr6u4e55f8tgnlu5mam76310pqg94usb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
