@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,7 +38,7 @@ public class Signup extends AppCompatActivity {
     private Button regist;
     private EditText mDatebirth;
     Calendar myCalendar = Calendar.getInstance();
-
+    private ImageButton backfromreg;
 
 
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -64,10 +65,17 @@ public class Signup extends AppCompatActivity {
         passreg = (EditText) findViewById(R.id.passwordregister);
         namereg = (EditText) findViewById(R.id.namereg);
         regist = (Button) findViewById(R.id.buttonRegister);
+        backfromreg = (ImageButton) findViewById(R.id.backButtonreg);
 // ...
         mAuth = FirebaseAuth.getInstance();
 
-
+        backfromreg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backreg = new Intent(Signup.this,Main.class);
+                Signup.this.startActivity(backreg);
+            }
+        });
 
 
         mDatebirth.setOnClickListener(new View.OnClickListener() {

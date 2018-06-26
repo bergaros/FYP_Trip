@@ -7,7 +7,14 @@
     tools:context=".Signup">
 
 
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/backButtonreg"
 
+        android:src="@mipmap/ic_back_round" />
 
     <TextView
         android:id="@+id/textView4"
