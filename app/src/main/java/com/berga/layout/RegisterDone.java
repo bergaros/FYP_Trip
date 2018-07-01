@@ -3,6 +3,7 @@ package com.berga.layout;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,8 @@ public class RegisterDone extends AppCompatActivity {
         setContentView(R.layout.success_register);
         mLoginLink = (Button) findViewById(R.id.loginlink);
 
+
+
         mLoginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,5 +28,9 @@ public class RegisterDone extends AppCompatActivity {
                 RegisterDone.this.startActivity(myIntent);
             }
         });
+
+
     }
+
+
 }

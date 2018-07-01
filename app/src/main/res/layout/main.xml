@@ -59,7 +59,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_marginLeft="61dp"
+        android:layout_marginLeft="52dp"
         android:layout_height="wrap_content"
         android:text="Don't have an account? sign up"
         android:textColor="@android:color/background_dark"

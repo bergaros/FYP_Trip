@@ -24,7 +24,7 @@
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -38,6 +38,8 @@
         </activity>
         <activity android:name="com.berga.layout.RegisterDone" />
         <activity android:name="com.berga.layout.Signup" />
+        <activity android:name="com.berga.layout.Home" />
+        <activity android:name="com.berga.layout.Category" />
 
         <meta-data
             android:name="android.support.VERSION"

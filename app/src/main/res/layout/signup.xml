@@ -1,102 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signup">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:textSize="18sp"
+            />
 
-    <ImageButton
-        android:layout_width="35dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/backButtonreg"
+        <EditText
+            android:id="@+id/namereg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/textView4"
+            android:inputType="text"
+            android:hint="Name"
+            />
 
-        android:src="@mipmap/ic_back_round" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
-        android:textSize="18sp"
- />
-
-    <EditText
-        android:id="@+id/namereg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/textView4"
-        android:inputType="text"
-        android:hint="Name"
-/>
-
-    <EditText
-        android:id="@+id/dateBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/namereg"
-        android:clickable="true"
-        android:focusable="false"
-        android:editable="false"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Date of birth"
+        <EditText
+            android:id="@+id/dateBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namereg"
+            android:clickable="true"
+            android:focusable="false"
+            android:editable="false"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Date of birth"
 
 
-        android:inputType="text"
- />
+            android:inputType="text"
+            />
 
 
 
-    <EditText
-        android:id="@+id/emailregister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@id/dateBirth"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
+        <EditText
+            android:id="@+id/emailregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/dateBirth"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
 
-        android:hint="Email"
- />
+            android:hint="Email"
+            />
 
-    <EditText
-        android:id="@+id/passwordregister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
-        android:layout_below="@id/emailregister"
-        android:layout_marginBottom="20dp"
-        android:hint="Password"
-        android:inputType="textPassword"
- />
+        <EditText
+            android:id="@+id/passwordregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_below="@id/emailregister"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
 
 
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/passwordregister"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
-        android:text="@string/register"
- />
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/passwordregister"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/register"
+            />
+    </RelativeLayout>
 
-</RelativeLayout>
+
+
+
+
+
+</ScrollView>

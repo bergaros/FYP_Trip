@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -59,23 +60,19 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mDatebirth = (EditText)findViewById(R.id.dateBirth);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         emailreg = (EditText) findViewById(R.id.emailregister);
         passreg = (EditText) findViewById(R.id.passwordregister);
         namereg = (EditText) findViewById(R.id.namereg);
         regist = (Button) findViewById(R.id.buttonRegister);
-        backfromreg = (ImageButton) findViewById(R.id.backButtonreg);
+
 // ...
         mAuth = FirebaseAuth.getInstance();
 
-        backfromreg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent backreg = new Intent(Signup.this,Main.class);
-                Signup.this.startActivity(backreg);
-            }
-        });
+
 
 
         mDatebirth.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +96,16 @@ public class Signup extends AppCompatActivity {
                 createAccount(email, pass);
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if(id==android.R.id.home){
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void createAccount(final String email, String password){
@@ -182,7 +189,7 @@ public class Signup extends AppCompatActivity {
 
     public void updateUI(FirebaseUser user){
         if (user != null) {
-            Intent regsuccess = new Intent(Signup.this,RegisterDone.class);
+            Intent regsuccess = new Intent(Signup.this,Home.class);
             Signup.this.startActivity(regsuccess);
 
         }

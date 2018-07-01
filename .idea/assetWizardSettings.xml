@@ -13,6 +13,19 @@
                       <PersistentState>
                         <option name="children">
                           <map>
+                            <entry key="actionbar">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="C:\Users\user\Pictures\fyp\hotel.jpg" />
+                                      <entry key="outputName" value="Hotel" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
@@ -46,9 +59,11 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="foregroundAssetType" value="CLIP_ART" />
-                                      <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="ic_back" />
+                                      <entry key="backgroundLayerName" value="ic_back_background" />
+                                      <entry key="foregroundImage" value="C:\Users\user\Pictures\fyp\theme.jpg" />
+                                      <entry key="foregroundLayerName" value="themeparklayer" />
+                                      <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="outputName" value="themepark" />
                                       <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>

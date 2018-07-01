@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.Menu;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +27,9 @@ public class Main extends AppCompatActivity {
     private Button logbut;
     private FirebaseAuth mAuth;
 // ...
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +122,7 @@ public class Main extends AppCompatActivity {
 
     public void updateUI(FirebaseUser user){
         if (user != null) {
-            Intent regsuccess = new Intent(Main.this,RegisterDone.class);
+            Intent regsuccess = new Intent(Main.this,Home.class);
             Main.this.startActivity(regsuccess);
         }
         else{
