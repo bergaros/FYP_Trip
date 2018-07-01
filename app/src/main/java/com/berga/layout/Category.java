@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +22,10 @@ public class Category extends AppCompatActivity {
     private DatabaseReference FireDat;
     private ImageView catcounimage;
     private Toolbar toolbarname;
+    private Button restaurantcat;
+    private Button themecat;
+    private Button hotelcat;
+    private Button pubtranscat;
 
     private TextView countryDesc;
 
@@ -34,6 +40,12 @@ public class Category extends AppCompatActivity {
         catcounimage = (ImageView) findViewById(R.id.imagecategory);
         toolbarname = (Toolbar) findViewById(R.id.tolbarname);
         countryDesc = (TextView) findViewById(R.id.countryDesc);
+        restaurantcat = (Button) findViewById(R.id.restaurantcat);
+        themecat = (Button) findViewById(R.id.themecat);
+        hotelcat = (Button) findViewById(R.id.hotelcat);
+        pubtranscat = (Button) findViewById(R.id.pubtranscat);
+
+
 
         FireDat.addValueEventListener(new ValueEventListener() {
             @Override
@@ -44,12 +56,39 @@ public class Category extends AppCompatActivity {
                 Picasso.with(Category.this).load(image).into(catcounimage);
                 catcounimage.setContentDescription(name);
                 toolbarname.setTitle(name);
-
                 countryDesc.setText(desc);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        restaurantcat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        themecat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        hotelcat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        pubtranscat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
             }
         });

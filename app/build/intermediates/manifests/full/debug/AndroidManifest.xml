@@ -27,7 +27,6 @@
         android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.berga.layout.Main" >
             <intent-filter>
@@ -40,6 +39,7 @@
         <activity android:name="com.berga.layout.Signup" />
         <activity android:name="com.berga.layout.Home" />
         <activity android:name="com.berga.layout.Category" />
+        <activity android:name="com.berga.layout.Places" />
 
         <meta-data
             android:name="android.support.VERSION"

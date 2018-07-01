@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fdb449aa9b26bda1b9e6bbca9bc43cad\AndroidManifest.xml:17:1-31:12
 MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-ui-database-0.4.0.aar\d06f4c7339d4e10ba4524bb7afb72a2b\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\ccef2fa4d30865c73b133351a72fb3dd\AndroidManifest.xml:17:1-31:12
@@ -42,20 +42,20 @@ MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\user\.
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f8500cf51f398155af04aad2de7809e5\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3b90eda8b0b994ca6318b268acb3fce8\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\1479b35d430fabfe672f1377d3f3855d\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:1-28:12
 		INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:2:11-69
@@ -78,7 +78,7 @@ MERGED from [com.google.firebase:firebase-storage-common:16.0.1] C:\Users\user\.
 	android:name
 		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:7:5-27:19
+ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:7:5-26:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fdb449aa9b26bda1b9e6bbca9bc43cad\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fdb449aa9b26bda1b9e6bbca9bc43cad\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\ccef2fa4d30865c73b133351a72fb3dd\AndroidManifest.xml:25:5-29:19
@@ -180,9 +180,13 @@ ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:23:19-39
 activity#com.berga.layout.Category
-ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:24:9-26:25
+ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:24:9-46
 	android:name
 		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:24:19-43
+activity#com.berga.layout.Places
+ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:25:9-53
+	android:name
+		ADDED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml:25:19-41
 uses-sdk
 INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\user\Documents\And stu\Layout\app\src\main\AndroidManifest.xml
