@@ -40,6 +40,7 @@
         <activity android:name="com.berga.layout.Signup" />
         <activity android:name="com.berga.layout.Home" />
         <activity android:name="com.berga.layout.Category" />
+        <activity android:name="com.berga.layout.Places" />
 
         <meta-data
             android:name="android.support.VERSION"

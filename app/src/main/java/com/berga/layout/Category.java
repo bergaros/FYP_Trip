@@ -1,5 +1,6 @@
 package com.berga.layout;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ public class Category extends AppCompatActivity {
     private Button themecat;
     private Button hotelcat;
     private Button pubtranscat;
+    private String placeCategory;
 
     private TextView countryDesc;
 
@@ -68,28 +70,44 @@ public class Category extends AppCompatActivity {
         restaurantcat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                placeCategory = restaurantcat.getText().toString();
+                Intent placeIntent = new Intent(Category.this, Places.class);
+                placeIntent.putExtra("countryKey", CountryKey);
+                placeIntent.putExtra("placeCategory", placeCategory);
+                Category.this.startActivity(placeIntent);
             }
         });
 
         themecat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                placeCategory = themecat.getText().toString();
+                Intent placeIntent = new Intent(Category.this, Places.class);
+                placeIntent.putExtra("countryKey", CountryKey);
+                placeIntent.putExtra("placeCategory", placeCategory);
+                Category.this.startActivity(placeIntent);
             }
         });
 
         hotelcat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                placeCategory = hotelcat.getText().toString();
+                Intent placeIntent = new Intent(Category.this, Places.class);
+                placeIntent.putExtra("countryKey", CountryKey);
+                placeIntent.putExtra("placeCategory", placeCategory);
+                Category.this.startActivity(placeIntent);
             }
         });
 
         pubtranscat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                placeCategory = pubtranscat.getText().toString();
+                Intent placeIntent = new Intent(Category.this, Places.class);
+                placeIntent.putExtra("countryKey", CountryKey);
+                placeIntent.putExtra("placeCategory", placeCategory);
+                Category.this.startActivity(placeIntent);
             }
         });
     }
