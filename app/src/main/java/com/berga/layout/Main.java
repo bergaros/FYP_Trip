@@ -35,6 +35,8 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         mAuth = FirebaseAuth.getInstance();
         mLinkSignup = (TextView) findViewById(R.id.linktosignup);
         emailog = (EditText) findViewById(R.id.emailog);
@@ -70,7 +72,8 @@ public class Main extends AppCompatActivity {
         if(!validateForm()){
             return;
         }
-
+        Toast.makeText(Main.this, "Loading.",
+                Toast.LENGTH_SHORT).show();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -113,8 +116,12 @@ public class Main extends AppCompatActivity {
         } else {
             if(password.length() < 6){
                 passlog.setError("min 6 characters");
+
             }
-            passlog.setError(null);
+            else {
+                passlog.setError(null);
+            }
+
         }
 
         return valid;

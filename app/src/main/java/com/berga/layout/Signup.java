@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -60,6 +61,7 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mDatebirth = (EditText)findViewById(R.id.dateBirth);
@@ -89,8 +91,7 @@ public class Signup extends AppCompatActivity {
         regist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Signup.this, "Loading.",
-                        Toast.LENGTH_SHORT).show();
+
                 String email = emailreg.getText().toString();
                 String pass = passreg.getText().toString();
                 createAccount(email, pass);
@@ -113,7 +114,8 @@ public class Signup extends AppCompatActivity {
             return;
         }
 
-
+        Toast.makeText(Signup.this, "Loading.",
+                Toast.LENGTH_SHORT).show();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -135,10 +137,11 @@ public class Signup extends AppCompatActivity {
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(Signup.this, "Register failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                Toast.makeText(Signup.this,
+                                        "User with this email already exist.", Toast.LENGTH_SHORT).show();
 
+                            }
                         }
 
                         // ...
@@ -180,8 +183,28 @@ public class Signup extends AppCompatActivity {
         } else {
             if(password.length() < 6){
                 passreg.setError("min 6 characters");
+                valid = false;
             }
-            passreg.setError(null);
+            else{
+                passreg.setError(null);
+            }
+
+        }
+        String date = mDatebirth.getText().toString();
+        if(TextUtils.isEmpty(date)){
+            mDatebirth.setError("Required.");
+            valid = false;
+        }
+        else{
+            mDatebirth.setError(null);
+        }
+        String name = namereg.getText().toString();
+        if(TextUtils.isEmpty(name)){
+            namereg.setError("Required.");
+            valid = false;
+        }
+        else{
+            namereg.setError(null);
         }
 
         return valid;
