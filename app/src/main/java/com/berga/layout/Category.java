@@ -43,7 +43,7 @@ public class Category extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         CountryKey = getIntent().getExtras().get("Countrykey").toString();
-        FireDat = FirebaseDatabase.getInstance().getReference().child("Country").child(CountryKey);
+        FireDat = FirebaseDatabase.getInstance().getReference().child("City").child(CountryKey);
         catcounimage = (ImageView) findViewById(R.id.imagecategory);
         toolbarname = (Toolbar) findViewById(R.id.tolbarname);
         countryDesc = (TextView) findViewById(R.id.countryDesc);

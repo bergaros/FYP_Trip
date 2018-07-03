@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        fireDat = FirebaseDatabase.getInstance().getReference().child("Country");
+        fireDat = FirebaseDatabase.getInstance().getReference().child("City");
         fireDat.keepSynced(true);
 
         mCountryList = (RecyclerView) findViewById(R.id.countryrecview);
@@ -80,6 +80,8 @@ public class Home extends AppCompatActivity {
 
                 viewHolder.setName(model.getName());
                 viewHolder.setImage(getApplicationContext(), model.getFileLoc1());
+                viewHolder.setCountryname(model.getCountryname());
+
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -103,8 +105,12 @@ public class Home extends AppCompatActivity {
         }
 
         public void setName(String name) {
+            TextView countryCitytext = (TextView) mView.findViewById(R.id.cityImgText);
+            countryCitytext.setText(name);
+        }
+        public void setCountryname(String countryname) {
             TextView countryImgText = (TextView) mView.findViewById(R.id.countryImgText);
-            countryImgText.setText(name);
+            countryImgText.setText(countryname);
         }
 
         public void setImage(Context ctx, String image) {

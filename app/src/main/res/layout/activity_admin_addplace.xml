@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddplace">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Place"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/plname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/textView4"
+            android:inputType="text"
+            android:hint="Name"
+            />
+
+        <EditText
+            android:id="@+id/plDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/plname"
+            android:inputType="text"
+            android:hint="Description"
+            />
+
+
+        <EditText
+            android:id="@+id/plAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_below="@id/plDesc"
+            android:layout_marginBottom="20dp"
+            android:hint="Address"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/plLatLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_below="@id/plAddress"
+            android:layout_marginBottom="20dp"
+            android:hint="Lat,Long"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/plContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_below="@id/plLatLong"
+            android:layout_marginBottom="20dp"
+            android:hint="Contact"
+            android:inputType="text"
+            />
+        <EditText
+            android:id="@+id/plImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_below="@id/plContact"
+            android:layout_marginBottom="20dp"
+            android:hint="Image"
+            android:inputType="text"
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/plImage"
+            />
+        <Button
+            android:id="@+id/buttonAddplace"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/spinner"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Add"
+            />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

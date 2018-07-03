@@ -1,4 +1,4 @@
-#Mon Jul 02 03:58:38 CST 2018
+#Tue Jul 03 10:57:45 CST 2018
 base.0=C\:\\Users\\user\\Documents\\And stu\\Layout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
 path.0=classes.dex
 renamed.0=classes.dex

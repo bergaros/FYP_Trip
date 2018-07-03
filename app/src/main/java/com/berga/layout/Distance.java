@@ -13,11 +13,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Distance extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private String latlong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distance);
+        latlong = getIntent().getExtras().get("countryKey").toString();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -37,10 +39,12 @@ public class Distance extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        String[] LatLong = latlong.split(",");
+        double latitudeD = Double.parseDouble(LatLong[0]);
+        double longitudeD = Double.parseDouble(LatLong[1]);
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng latlongD = new LatLng(latitudeD, longitudeD);
+        mMap.addMarker(new MarkerOptions().position(latlongD).title("Location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latlongD));
     }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adminhome">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:id="@+id/atexttitle"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:text="-----Welcome Administrator-----"
+
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addcountryadm"
+        android:layout_below="@+id/atexttitle"
+        android:layout_centerHorizontal="true"
+        android:text="Add Country"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addplaceadm"
+        android:layout_below="@+id/addcountryadm"
+        android:layout_centerHorizontal="true"
+        android:text="Add Place"
+        />
+
+</RelativeLayout>

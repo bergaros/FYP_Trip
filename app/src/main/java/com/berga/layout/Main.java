@@ -47,7 +47,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(Main.this, Signup.class);
-                Main.this.startActivity(myIntent);
+                startActivity(myIntent);
             }
         });
 
@@ -74,28 +74,44 @@ public class Main extends AppCompatActivity {
         }
         Toast.makeText(Main.this, "Loading.",
                 Toast.LENGTH_SHORT).show();
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("TAG", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(Main.this, "Authentication Success.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("TAG", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(Main.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
+        if(email.equals("admin")){
+            if(password.equals("admin123")){
+                Toast.makeText(Main.this, "Success.",
+                        Toast.LENGTH_SHORT).show();
+                Intent adIntent = new Intent(Main.this,Adminhome.class);
+                startActivity(adIntent);
+            }
+            else{
+                Toast.makeText(Main.this, "You are not admin user.",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+        else{
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("TAG", "signInWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Toast.makeText(Main.this, "Authentication Success.",
+                                        Toast.LENGTH_SHORT).show();
+                                updateUI(user);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("TAG", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(Main.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                updateUI(null);
+                            }
 
-                        // ...
-                    }
-                });
+                            // ...
+                        }
+                    });
+        }
+
     }
 
     private boolean validateForm() {

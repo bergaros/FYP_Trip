@@ -1,12 +1,16 @@
 package com.berga.layout;
 
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,6 +37,7 @@ public class placedetails extends AppCompatActivity {
     private TextView placeraddress;
     private ImageView mapstatic;
     private Button checkdist;
+    private String LatLong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +56,11 @@ public class placedetails extends AppCompatActivity {
         placercategory = (TextView) findViewById(R.id.placercategory);
         placeraddress = (TextView) findViewById(R.id.placeraddress);
 
+
+
         placeKey = getIntent().getExtras().get("placeKey").toString();
         countryKey = getIntent().getExtras().get("countryKey").toString();
-        FireDat = FirebaseDatabase.getInstance().getReference().child("Country").child(countryKey).child("Places").child(placeKey);
+        FireDat = FirebaseDatabase.getInstance().getReference().child("City").child(countryKey).child("Places").child(placeKey);
 
         FireDat.addValueEventListener(new ValueEventListener() {
             @Override
@@ -63,9 +70,10 @@ public class placedetails extends AppCompatActivity {
                 String contact = dataSnapshot.child("Contact").getValue().toString();
                 String description = dataSnapshot.child("Description").getValue().toString();
                 String Image = dataSnapshot.child("Image").getValue().toString();
-                String LatLong = dataSnapshot.child("LatLong").getValue().toString();
+
+                LatLong = dataSnapshot.child("LatLong").getValue().toString();
                 String name = dataSnapshot.child("Name").getValue().toString();
-                String mapurl = "http://maps.google.com/maps/api/staticmap?center="+LatLong+"&zoom=15&size=600x500&sensor=true";
+                String mapurl = "http://maps.google.com/maps/api/staticmap?center="+LatLong+"&zoom=16.5&size=600x500&sensor=true&markers=color:red%7Clabel:A%7C"+LatLong+"";
                 Picasso.with(placedetails.this).load(Image).into(placeimage);
                 Picasso.with(placedetails.this).load(mapurl).into(mapstatic);
                 placetool.setTitle(name);
@@ -78,6 +86,14 @@ public class placedetails extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        checkdist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr=My+Location&daddr="+LatLong+""));
+                startActivity(mapIntent);
             }
         });
     }
@@ -113,4 +129,5 @@ public class placedetails extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

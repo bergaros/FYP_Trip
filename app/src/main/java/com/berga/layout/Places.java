@@ -41,7 +41,7 @@ public class Places extends AppCompatActivity {
         countrykey = getIntent().getExtras().get("countryKey").toString();
         placeCategory = getIntent().getExtras().get("placeCategory").toString();
 
-        fireDat = FirebaseDatabase.getInstance().getReference().child("Country").child(countrykey).child("Places");
+        fireDat = FirebaseDatabase.getInstance().getReference().child("City").child(countrykey).child("Places");
         fireDat.keepSynced(true);
 
         mPlaceList = (RecyclerView) findViewById(R.id.placerecyclerview);
