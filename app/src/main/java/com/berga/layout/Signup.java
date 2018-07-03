@@ -21,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -132,6 +133,9 @@ public class Signup extends AppCompatActivity {
 
                             mDatabase.child("Users").child(userid).setValue(databaseuser);
                             FirebaseUser user = mAuth.getCurrentUser();
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(namereg.getText().toString()).build();
+                            user.updateProfile(profileUpdates);
                             Toast.makeText(Signup.this, "Register Success.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(user);
@@ -155,6 +159,7 @@ public class Signup extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser!=null){
+
             updateUI(currentUser);
         }
     }

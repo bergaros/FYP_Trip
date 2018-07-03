@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class placedetails extends AppCompatActivity {
     private ImageView mapstatic;
     private Button checkdist;
     private String LatLong;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +119,8 @@ public class placedetails extends AppCompatActivity {
             placedetails.this.startActivity(myIntent);
         }
         else if(item.getItemId()==R.id.feedbackm){
-            Toast.makeText(this,"You clicked feedback", Toast.LENGTH_SHORT).show();
+            Intent myIntent = new Intent(placedetails.this, Globalchat.class);
+            placedetails.this.startActivity(myIntent);
         }
         else if(item.getItemId()==R.id.logoutm){
             FirebaseAuth.getInstance().signOut();

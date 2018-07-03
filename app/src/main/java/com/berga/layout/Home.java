@@ -57,7 +57,8 @@ public class Home extends AppCompatActivity {
             Toast.makeText(this,"You clicked favorite", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.feedbackm){
-            Toast.makeText(this,"You clicked feedback", Toast.LENGTH_SHORT).show();
+            Intent myIntent = new Intent(Home.this, Globalchat.class);
+            Home.this.startActivity(myIntent);
         }
         else if(item.getItemId()==R.id.logoutm){
             FirebaseAuth.getInstance().signOut();

@@ -136,7 +136,8 @@ public class Category extends AppCompatActivity {
             Category.this.startActivity(myIntent);
         }
         else if(item.getItemId()==R.id.feedbackm){
-            Toast.makeText(this,"You clicked feedback", Toast.LENGTH_SHORT).show();
+            Intent myIntent = new Intent(Category.this, Globalchat.class);
+            Category.this.startActivity(myIntent);
         }
         else if(item.getItemId()==R.id.logoutm){
             FirebaseAuth.getInstance().signOut();

@@ -3,7 +3,7 @@
     package="com.berga.layout">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -51,7 +51,9 @@
             android:name=".Distance"
             android:label="@string/title_activity_distance" />
         <activity android:name=".Adminhome" />
-        <activity android:name=".AdminAddplace"></activity>
+        <activity android:name=".AdminAddplace" />
+        <activity android:name=".Globalchat" />
+        <activity android:name=".Chatroom"></activity>
     </application>
 
 </manifest>

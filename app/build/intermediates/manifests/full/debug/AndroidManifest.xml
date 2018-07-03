@@ -77,6 +77,8 @@
             android:label="@string/title_activity_distance" />
         <activity android:name="com.berga.layout.Adminhome" />
         <activity android:name="com.berga.layout.AdminAddplace" />
+        <activity android:name="com.berga.layout.Globalchat" />
+        <activity android:name="com.berga.layout.Chatroom" />
 
         <meta-data
             android:name="android.support.VERSION"
