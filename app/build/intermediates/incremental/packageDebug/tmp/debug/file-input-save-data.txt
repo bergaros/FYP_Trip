@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jul 04 05:54:05 CST 2018
+#Wed Aug 01 23:22:25 CST 2018
 2.base=C\:\\Users\\user\\Documents\\And stu\\Layout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 5.set=DEX
 0.path=classes.dex

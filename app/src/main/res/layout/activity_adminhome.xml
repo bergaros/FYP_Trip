@@ -17,19 +17,12 @@
         android:text="-----Welcome Administrator-----"
 
         />
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/addcountryadm"
-        android:layout_below="@+id/atexttitle"
-        android:layout_centerHorizontal="true"
-        android:text="Add Country"
-        />
+
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/addplaceadm"
-        android:layout_below="@+id/addcountryadm"
+        android:layout_below="@+id/atexttitle"
         android:layout_centerHorizontal="true"
         android:text="Add Place"
         />

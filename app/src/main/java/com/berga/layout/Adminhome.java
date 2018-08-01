@@ -20,7 +20,7 @@ public class Adminhome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminhome);
 
-        addbutcountry = (Button) findViewById(R.id.addcountryadm);
+
         addbutplace = (Button) findViewById(R.id.addplaceadm);
 
         addbutplace.setOnClickListener(new View.OnClickListener() {

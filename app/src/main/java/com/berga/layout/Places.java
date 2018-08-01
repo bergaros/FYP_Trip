@@ -75,7 +75,6 @@ public class Places extends AppCompatActivity {
         FirebaseRecyclerAdapter<Place, PlaceViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Place, PlaceViewHolder>(Place.class,R.layout.placecardview, PlaceViewHolder.class, fireDat.orderByChild("Category").equalTo(placeCategory)) {
             @Override
             protected void populateViewHolder(PlaceViewHolder viewHolder, Place model, int position) {
-
                 final String Placekey = getRef(position).getKey();
 
                 viewHolder.setName(model.getName());
@@ -91,13 +90,11 @@ public class Places extends AppCompatActivity {
                         Places.this.startActivity(categoryIntent);
                     }
                 });
-
                 viewHolder.favoriteadd.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
                         mProcessFav = true;
-
                             fireFav.addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -111,15 +108,11 @@ public class Places extends AppCompatActivity {
                                             mProcessFav = false;
                                         }
                                     }
-
                                 }
-
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError databaseError) {
-
                                 }
                             });
-
                     }
                 });
             }
@@ -186,10 +179,7 @@ public class Places extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.profilem){
-            Toast.makeText(this,"You clicked Profile", Toast.LENGTH_SHORT).show();
-        }
-        else if(item.getItemId()==R.id.favoritem){
+         if(item.getItemId()==R.id.favoritem){
             Toast.makeText(this,"You clicked favorite", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.homem){

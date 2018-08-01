@@ -58,8 +58,6 @@ public class placedetails extends AppCompatActivity {
         placercategory = (TextView) findViewById(R.id.placercategory);
         placeraddress = (TextView) findViewById(R.id.placeraddress);
 
-
-
         placeKey = getIntent().getExtras().get("placeKey").toString();
         countryKey = getIntent().getExtras().get("countryKey").toString();
         FireDat = FirebaseDatabase.getInstance().getReference().child("City").child(countryKey).child("Places").child(placeKey);
@@ -84,13 +82,10 @@ public class placedetails extends AppCompatActivity {
                 placercontact.setText(contact);
                 placercategory.setText(category);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
-
         checkdist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,10 +103,7 @@ public class placedetails extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.profilem){
-            Toast.makeText(this,"You clicked Profile", Toast.LENGTH_SHORT).show();
-        }
-        else if(item.getItemId()==R.id.favoritem){
+        if(item.getItemId()==R.id.favoritem){
             Toast.makeText(this,"You clicked favorite", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.homem){

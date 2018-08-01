@@ -125,10 +125,8 @@ public class Chatroom extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.profilem){
-            Toast.makeText(this,"You clicked Profile", Toast.LENGTH_SHORT).show();
-        }
-        else if(item.getItemId()==R.id.favoritem){
+
+         if(item.getItemId()==R.id.favoritem){
             Toast.makeText(this,"You clicked favorite", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.homem){

@@ -61,12 +61,8 @@ public class Globalchat extends AppCompatActivity {
 
         listView.setAdapter(arrayAdapter);
 
-        if(user!=null){
             name = user.getDisplayName();
-        }
-        else{
-            name = "test";
-        }
+
 
 
         add_room.setOnClickListener(new View.OnClickListener() {
@@ -150,10 +146,7 @@ public class Globalchat extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.profilem){
-            Toast.makeText(this,"You clicked Profile", Toast.LENGTH_SHORT).show();
-        }
-        else if(item.getItemId()==R.id.favoritem){
+         if(item.getItemId()==R.id.favoritem){
             Toast.makeText(this,"You clicked favorite", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.homem){
